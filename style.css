@@ -1,0 +1,210 @@
+:root {
+    --primary-color: #000000;
+    --secondary-color: #007864;
+    --text-color: #ffffff;
+  }
+
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    font-family: "TypeMachine";
+    background: linear-gradient(45deg,#0f0c29 , #000000, #0f0c29 );
+    color: var(--text-color);
+  }
+  @font-face {
+  font-family: "TypeMachine";
+  src: url("Type Machine.ttf") format("truetype");
+  }
+  .sidebar {
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    background: rgba(0, 0, 0, 0.9);
+    transition: 0.3s;
+    padding: 20px;
+    z-index: 1000;
+  }
+
+  .sidebar.active {
+    left: 0;
+  }
+
+  .sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 40px;
+    font-size: 1.2rem;
+    transition: 0.3s;
+    padding-top: 100px;
+  }
+
+  .sidebar a:hover {
+    color: var(--secondary-color);
+  }
+
+  .hamburger {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 2rem;
+    color: white;
+    z-index: 1001;
+    cursor: pointer;
+
+  }
+  .publication-item {
+display: block;
+text-decoration: none;
+color: inherit; /* Maintain original text color */
+cursor: pointer;
+}
+
+.project-card {
+/* Your existing card styles */
+transition: background-color 0.3s ease; /* Optional hover effect */
+}
+
+.project-card:hover {
+background-color: #f5f5f561; /* Optional hover effect */
+}
+  section {
+    min-height: 100vh;
+    padding: 80px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .profile-img {
+    width: 500px;
+    height: 600px;
+    margin: 20px auto;
+  }
+
+  .project-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 15px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s;
+  }
+
+  .project-card:hover {
+    transform: translateY(-10px);
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    margin: 10px 0;
+    padding: 15px;
+    width: 100%;
+    border-radius: 5px;
+  }
+  .experience-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 2rem;
+  margin: 2rem 0;
+  border-left: 4px solid var(--secondary-color);
+  transition: transform 0.3s;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+}
+
+.company-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--secondary-color);
+  color: white;
+  border-radius: 20px;
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+
+.achievement-badge {
+  display: inline-block;
+  padding: 1rem 2rem;
+  margin: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  transition: all 0.3s;
+}
+
+.achievement-badge:hover {
+  background: var(--secondary-color);
+  transform: scale(1.05);
+}
+
+.achievement-badge i {
+  margin-right: 10px;
+}
+.social-links {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.social-links a {
+  color: white;
+  font-size: 2.5rem;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--secondary-color);
+  transform: translateY(-3px);
+}
+
+.box {
+    background: hsla(0, 0%, 100%, 0);
+    padding: 16px 24px; 
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.01);
+  
+    &::after {
+      position: absolute;
+      content: "";
+      top: 15px;
+      left: 0;
+      right: 0;
+      z-index: -1;
+      height: 100%;
+      width: 100%;
+      transform: scale(0.8) translateZ(0);
+      filter: blur(35px);
+      background: linear-gradient(
+        to left,
+        #ff5770,
+        #e4428d,
+        #c42da8,
+        #9e16c3,
+        #6501de,
+        #9e16c3,
+        #c42da8,
+        #e4428d,
+        #ff5770
+      );
+      background-size: 200% 200%;
+      animation: animateGlow 1.25s linear infinite;
+    }
+  }
+  
+  @keyframes animateGlow {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 200% 50%;
+    }
+  }
+  
