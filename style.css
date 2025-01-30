@@ -77,9 +77,9 @@ background-color: #f5f5f561; /* Optional hover effect */
     justify-content: center;
   }
 
-  .profile-img {
-    width: 500px;
-    height: 600px;
+.profile-img {
+    width: 75%;
+    height: 90%;
     margin: 20px auto;
   }
 
