@@ -7,7 +7,7 @@
   body {
     font-family: 'Segoe UI', sans-serif;
     font-family: "TypeMachine";
-    background: linear-gradient(45deg,#0f0c29 , #0dcaf0, #0f0c29 );
+    background: linear-gradient(45deg, #0f0c29, #047c92, #0f0c29);
     color: var(--text-color);
   }
   @font-face {
